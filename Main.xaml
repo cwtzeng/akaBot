@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>827,764</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>827,844</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,7 +72,7 @@
         <av:PointCollection x:Key="ConnectorLocation">80,77.4 80,127.2</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init settings" sap:VirtualizedContainerService.HintSize="874,1979" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init settings" sap:VirtualizedContainerService.HintSize="874,1674" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
         <Sequence sap:VirtualizedContainerService.HintSize="848,1262" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -173,7 +173,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">0.400000000000006,127.2</av:Point>
-          <av:Size x:Key="ShapeSize">199,84</av:Size>
+          <av:Size x:Key="ShapeSize">199,61</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Double x:Key="StateContainerWidth">185</x:Double>
           <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -184,14 +184,14 @@
         <Transition DisplayName="System Error" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">70.05,211.2 70.05,526.6 239.2,526.6</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">70.05,188.2 70.05,485.8 239.2,485.8</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">27</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.Condition>[SystemError isNot Nothing]</Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="End process by error, notification error case,&#xA;Log exceptions&#xA;" DisplayName="Error process" sap:VirtualizedContainerService.HintSize="161,129" sap2010:WorkflowViewState.IdRef="State_4" IsFinal="True">
+            <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="End process by error, notification error case,&#xA;Log exceptions&#xA;" DisplayName="Error process" sap:VirtualizedContainerService.HintSize="161,61" sap2010:WorkflowViewState.IdRef="State_4" IsFinal="True">
               <State.Entry>
                 <TryCatch sap:VirtualizedContainerService.HintSize="418,287" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                   <TryCatch.Catches>
@@ -214,7 +214,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">239.2,449.2</av:Point>
-                  <av:Size x:Key="ShapeSize">161,129</av:Size>
+                  <av:Size x:Key="ShapeSize">161,61</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">147</x:Double>
                   <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -227,14 +227,14 @@
         <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">199.4,165 229.4,165 229.4,107.6 439.45,107.6 439.45,137.6</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">199.4,154.65 229.4,154.65 229.4,107.6 439.45,107.6 439.45,137.6</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">32</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.Condition>[SystemError Is Nothing]</Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get all input datas in process" DisplayName="Get transactions data" sap:VirtualizedContainerService.HintSize="205,103" sap2010:WorkflowViewState.IdRef="State_5">
+            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get all input datas in process" DisplayName="Get transactions data" sap:VirtualizedContainerService.HintSize="205,80" sap2010:WorkflowViewState.IdRef="State_5">
               <State.Entry>
                 <Sequence sap:VirtualizedContainerService.HintSize="436,638" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
@@ -363,7 +363,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">347.2,137.6</av:Point>
-                  <av:Size x:Key="ShapeSize">205,103</av:Size>
+                  <av:Size x:Key="ShapeSize">205,80</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">191</x:Double>
                   <x:Double x:Key="StateContainerHeight">44.200000000000045</x:Double>
@@ -374,7 +374,7 @@
                 <Transition DisplayName="Error" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">418.95,240.6 418.95,270.6 209.2,270.6 209.2,494.35 239.2,494.35</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">418.95,217.6 418.95,247.6 209.2,247.6 209.2,470.55 239.2,470.55</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">27</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">25</x:Int32>
                     </scg:Dictionary>
@@ -387,14 +387,14 @@
                 <Transition DisplayName="[680429873] hasNext" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">470.2,137.6 470.2,119.1 732.2,119.1 732.2,419.1 702.2,419.1</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">470.2,137.6 470.2,107.6 732.2,107.6 732.2,407.6 702.2,407.6</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">46</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[hasNext]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Handle bussiness here" DisplayName="Process Bussiness" sap:VirtualizedContainerService.HintSize="205,103" sap2010:WorkflowViewState.IdRef="State_3">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Handle bussiness here" DisplayName="Process Bussiness" sap:VirtualizedContainerService.HintSize="205,80" sap2010:WorkflowViewState.IdRef="State_3">
                       <State.Entry>
                         <Sequence sap:VirtualizedContainerService.HintSize="601,2647" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <sap:WorkflowViewStateService.ViewState>
@@ -591,7 +591,7 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">497.2,367.6</av:Point>
-                          <av:Size x:Key="ShapeSize">205,103</av:Size>
+                          <av:Size x:Key="ShapeSize">205,80</av:Size>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Double x:Key="StateContainerWidth">191</x:Double>
                           <x:Double x:Key="StateContainerHeight">44.200000000000045</x:Double>
@@ -615,14 +615,14 @@
                         <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">599.7,470.6 599.7,549.2</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">599.7,447.6 599.7,549.2</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.Condition>[isSuccess]</Transition.Condition>
                           <Transition.To>
-                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Finish process here!!&#xA;" DisplayName="Finish Process" sap:VirtualizedContainerService.HintSize="161,99" sap2010:WorkflowViewState.IdRef="State_6" IsFinal="True">
+                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Finish process here!!&#xA;" DisplayName="Finish Process" sap:VirtualizedContainerService.HintSize="161,61" sap2010:WorkflowViewState.IdRef="State_6" IsFinal="True">
                               <State.Entry>
                                 <TryCatch sap:VirtualizedContainerService.HintSize="414,270" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                                   <TryCatch.Catches>
@@ -645,7 +645,7 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">519.2,549.2</av:Point>
-                                  <av:Size x:Key="ShapeSize">161,99</av:Size>
+                                  <av:Size x:Key="ShapeSize">161,61</av:Size>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <x:Double x:Key="StateContainerWidth">147</x:Double>
                                   <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -658,7 +658,7 @@
                         <Transition DisplayName="[796648779] T1" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">661.2,367.6 661.2,199.4 552.2,199.4</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">661.2,367.6 661.2,185.6 552.2,185.6</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">62</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
                             </scg:Dictionary>
@@ -678,7 +678,7 @@
                 <Transition DisplayName="[645560721] End of row" sap:VirtualizedContainerService.HintSize="430,505" sap2010:WorkflowViewState.IdRef="Transition_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">511.2,240.6 511.2,270.6 489.2,270.6 489.2,593.75 519.2,593.75</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">511.2,217.6 511.2,247.6 489.2,247.6 489.2,576.65 519.2,576.65</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">63</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">33</x:Int32>
                     </scg:Dictionary>
