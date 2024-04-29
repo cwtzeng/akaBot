@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>787,2965</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>787,3005</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_1_Read_Config_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,22 +59,22 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="01_Read_Config" sap:VirtualizedContainerService.HintSize="747,2845" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="01_Read_Config" sap:VirtualizedContainerService.HintSize="747,2885" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <rac:Comment DisplayName="[675812871] Comment" sap:VirtualizedContainerService.HintSize="725,265" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Version: 1.0&#xA;// Author: Alex Tzeng&#xA;// Parameters:&#xA;// configFileName: Excel file name with extension (xlsx) contain RPA configuration information&#xA;// configFilePath: Excel file folder&#xA;// Config: Turn Excel configuration into Dictionary variable&#xA;//&#xA;// Excel sheet name: Config List&#xA;// Excel column A: Configuration Name&#xA;// Excel column B: Configuration Value" />
-    <TryCatch DisplayName="[123373865] Try Catch" sap:VirtualizedContainerService.HintSize="725,2416" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="[123373865] Try Catch" sap:VirtualizedContainerService.HintSize="725,2456" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="[362884566] Sequence" sap:VirtualizedContainerService.HintSize="707,2189" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="[362884566] Sequence" sap:VirtualizedContainerService.HintSize="707,2229" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <rae:ExcelApplicationScope ExcelProperties="{x:Null}" Password="{x:Null}" AutoSave="True" BreakLinks="False" DisplayName="[362888061] Excel Application Scope" sap:VirtualizedContainerService.HintSize="685,2065" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="Config\Config.xlsx">
+          <rae:ExcelApplicationScope ExcelProperties="{x:Null}" Password="{x:Null}" AutoSave="True" BreakLinks="False" DisplayName="[362888061] Excel Application Scope" sap:VirtualizedContainerService.HintSize="685,2105" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="Config\Config.xlsx">
             <rae:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="re:WorkbookApplication">
                 <ActivityAction.Argument>
