@@ -1,0 +1,245 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="HouDonDientTu_Query" this:HouDonDientTu_Query.RowValue="[{&#xA;  1.0,&#xA;  &quot;1&quot;,&#xA;  &quot;1K22TAA&quot;,&#xA;  &quot;00001138&quot;,&#xA;  &quot;2022-06-30T00:00:00&quot;,&#xA;  &quot;CTY CỔ PHẦN VINAFCO&quot;,&#xA;  &quot;0100108504&quot;,&#xA;  &quot;PR220707017-KBV-TT CP VC hat nhua noi dia 06.2022&quot;,&#xA;  &quot;&quot;,&#xA;  &quot;&quot;,&#xA;  &quot;&quot;,&#xA;  2679127.0,&#xA;  7.999994027905359,&#xA;  214330.0,&#xA;  &quot;&quot;&#xA;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:rac="clr-namespace:RCA.Activities.Core;assembly=RCA.Activities.Core" xmlns:ran="clr-namespace:RCA.Activities.NativeBrowser;assembly=RCA.Activities.NativeBrowser" xmlns:raw="clr-namespace:RCA.Activities.Windows;assembly=RCA.Activities.Windows" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="RowValue" Type="InArgument(scg:IEnumerable(x:Object))" />
+    <x:Property Name="invoiceDetail" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="invoiceDetail1" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="invoiceDetail2" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="invoiceQueryResult" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="subTaskStatus" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>665,6116</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>HouDonDientTu_Query_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>RCA.Activities.Core</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>RCA.Activities.NativeBrowser</x:String>
+      <x:String>Aka.RPA.Library.Interfaces</x:String>
+      <x:String>RCA.Activities.NativeBrowser.Data.MessageModels</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>RCA.Activities.Browser</x:String>
+      <x:String>OpenQA.Selenium</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Windows</AssemblyReference>
+      <AssemblyReference>RCA.Activities.NativeBrowser</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Excel</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Browser</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>Aka.RPA.Library</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>WebDriver</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="HouDonDientTu_Query" sap:VirtualizedContainerService.HintSize="625,5276" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="[628176719] Try Catch" sap:VirtualizedContainerService.HintSize="603,5152" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="[508371748] Sequence" sap:VirtualizedContainerService.HintSize="585,4925" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ran:AttachBrowser Browser="{x:Null}" UiBrowser="{x:Null}" BrowserName="Chrome" ContinueOnError="False" DisplayName="[751199237] Attach Browser (NB)" sap:VirtualizedContainerService.HintSize="563,4801" sap2010:WorkflowViewState.IdRef="AttachBrowser_1" Maximize="False" QuitBrowserOnCompletedOrFaulted="False" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' omit:url='https://hoadondientu.gdt.gov.vn/tra-cuu/tra-cuu-hoa-don' /&gt;" TimeoutMS="30000" ZoomFactor="100">
+            <ran:AttachBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="[751201689] Do" sap:VirtualizedContainerService.HintSize="549,4703" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="invoiceTypeFound" />
+                    <Variable x:TypeArguments="x:Boolean" Name="invoiceDetailVanished" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ran:Refresh NativeBrowser="{x:Null}" TimeoutMS="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[014399347] Refresh (NB)" sap:VirtualizedContainerService.HintSize="527,22" sap2010:WorkflowViewState.IdRef="Refresh_1" />
+                  <ran:WaitPageLoadComplete NativeBrowser="{x:Null}" TimeoutMS="{x:Null}" WaitSuccess="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="2000" DisplayName="[065300678] Wait Page Load Complete (NB)" sap:VirtualizedContainerService.HintSize="527,22" sap2010:WorkflowViewState.IdRef="WaitPageLoadComplete_1" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[914116526] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_1" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='styles__MenuWrapper-sc-1opqjrn-4 eItfNu ant-dropdown-trigger' xpath='.//*[@id=&amp;apos;__next&amp;apos;]/section/section/div/div/div/div/div[5]/div' tag='div' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[268722945] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_5" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl xpath='.//div[2]/div/div/ul/li[1]/a' tag='a' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[932710579] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_3" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-tabs-tab-active ant-tabs-tab' xpath='.//*[@id=&amp;apos;__next&amp;apos;]/section/section/main/div/div/div/div/div[1]/div/div/div/div/div[1]/div[2]' tag='div' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:TypeInto DelayBetweenKeys="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[803627943] Type Into (NB)" EmptyField="True" sap:VirtualizedContainerService.HintSize="527,96" sap2010:WorkflowViewState.IdRef="TypeInto_1" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl id='nbmst' omit:class='ant-input Input__BorderBottomInput-sc-16b2ylx-2 fAKTjC' xpath='.//*[@id=&amp;apos;nbmst&amp;apos;]' tag='input' /&gt;" SetFocus="False" SimulateType="False" Text="[RowValue(6).ToString.Trim]" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[658292268] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_6" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-form-item-control has-success' xpath='(//div[@class=&amp;apos;ant-col ant-col-16&amp;apos;])[3]' tag='div' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:TypeInto DelayBetweenKeys="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[597839852] Type Into (NB)" EmptyField="True" sap:VirtualizedContainerService.HintSize="527,96" sap2010:WorkflowViewState.IdRef="TypeInto_3" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-calendar-input ' xpath='.//div[3]/div/div/div/div/div[1]/div/input' tag='input' /&gt;" SetFocus="False" SimulateType="False" Text="[Convert.ToDateTime(RowValue(4).ToString.Trim).ToString(&quot;dd/MM/yyyy&quot;)]" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[361424168] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_7" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-form-item-control has-success' xpath='(//div[@class=&amp;apos;ant-col ant-col-16&amp;apos;])[4]' tag='div' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:TypeInto DelayBetweenKeys="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[379102326] Type Into (NB)" EmptyField="True" sap:VirtualizedContainerService.HintSize="527,96" sap2010:WorkflowViewState.IdRef="TypeInto_4" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-calendar-input ' xpath='.//div[4]/div/div/div/div/div[1]/div/input' tag='input' /&gt;" SetFocus="False" SimulateType="False" Text="[Convert.ToDateTime(RowValue(4).ToString.Trim).ToString(&quot;dd/MM/yyyy&quot;)]" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[142135505] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_8" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-form-item-control has-success' xpath='(//div[@class=&amp;apos;ant-form-item-control has-success&amp;apos;])[10]' tag='div' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <DoWhile DisplayName="[025529950] Do While" sap:VirtualizedContainerService.HintSize="527,1425" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[invoiceTypeFound.Equals(False)]">
+                    <Sequence DisplayName="[044361088] Sequence" sap:VirtualizedContainerService.HintSize="486,1264" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="invoiceTypeString" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="[356910451] Assign" sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[invoiceTypeFound]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[044363088] Click (NB)" sap:VirtualizedContainerService.HintSize="464,118" sap2010:WorkflowViewState.IdRef="Click_9" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-select-selection&amp;#xA;            ant-select-selection--single' xpath='(.//*[@id=&amp;apos;ttxly&amp;apos;]/div)[2]' tag='div' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                      <raw:SendHotKey ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Element="{x:Null}" From="{x:Null}" KeyArgument="{x:Null}" UseWindow="{x:Null}" Alt="False" Ctrl="False" DisplayName="[044365093] Send Hot Key" sap:VirtualizedContainerService.HintSize="464,120" sap2010:WorkflowViewState.IdRef="SendHotKey_1" Key="DOWN" Selector="&lt;app FileName='%ProgramFiles%\Google\Chrome\Application\chrome.exe' ProcessName='chrome' Arguments=' --flag-switches-begin --disable-features=BlockInsecurePrivateNetworkRequests --flag-switches-end' Selector='Windows' SearchDescendants='False' /&gt;&lt;ctrl Name='Hóa Đơn Điện Tử - Google Chrome' ClassName='Chrome_WidgetWin_1' ControlType='Pane' /&gt;" SendWindowsMessage="False" Shift="False" TimeoutMS="30000" UIAutomation="UIA3" WaitForDisable="False" WaitForEnable="False" WaitForExist="False" WaitForVanish="False" Win="False" />
+                      <raw:SendHotKey ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Element="{x:Null}" From="{x:Null}" KeyArgument="{x:Null}" UseWindow="{x:Null}" Alt="False" Ctrl="False" DisplayName="[044367098] Send Hot Key" sap:VirtualizedContainerService.HintSize="464,120" sap2010:WorkflowViewState.IdRef="SendHotKey_2" Key="ENTER" Selector="&lt;app FileName='%ProgramFiles%\Google\Chrome\Application\chrome.exe' ProcessName='chrome' Arguments=' --flag-switches-begin --disable-features=BlockInsecurePrivateNetworkRequests --flag-switches-end' Selector='Windows' SearchDescendants='False' /&gt;&lt;ctrl Name='Hóa Đơn Điện Tử - Google Chrome' ClassName='Chrome_WidgetWin_1' ControlType='Pane' /&gt;" SendWindowsMessage="False" Shift="False" TimeoutMS="30000" UIAutomation="UIA3" WaitForDisable="False" WaitForEnable="False" WaitForExist="False" WaitForVanish="False" Win="False" />
+                      <ran:GetText NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[168870227] Get Text (NB)" sap:VirtualizedContainerService.HintSize="464,68" sap2010:WorkflowViewState.IdRef="GetText_1" Result="[invoiceTypeString]" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-select-selection&amp;#xA;            ant-select-selection--single' xpath='(.//*[@id=&amp;apos;ttxly&amp;apos;]/div)[2]' tag='div' /&gt;" TimeoutMS="30000" WaitVisible="True" />
+                      <If Condition="[RowValue(2).ToString.Trim.Substring(1,1).Equals(&quot;K&quot;) And invoiceTypeString.Equals(&quot;Tổng cục thuế đã nhận không mã&quot;)]" DisplayName="[759659393] If" sap:VirtualizedContainerService.HintSize="464,207" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Assign DisplayName="[321603765] Assign" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[invoiceTypeFound]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Then>
+                      </If>
+                      <If Condition="[RowValue(2).ToString.Trim.Substring(1,1).Equals(&quot;C&quot;) And invoiceTypeString.Equals(&quot;Đã cấp mã hóa đơn&quot;)]" DisplayName="[711014095] If" sap:VirtualizedContainerService.HintSize="464,207" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If.Then>
+                          <Assign DisplayName="[351143494] Assign" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[invoiceTypeFound]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Then>
+                      </If>
+                    </Sequence>
+                  </DoWhile>
+                  <ran:TypeInto DelayBetweenKeys="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[737017798] Type Into (NB)" EmptyField="True" sap:VirtualizedContainerService.HintSize="527,96" sap2010:WorkflowViewState.IdRef="TypeInto_2" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl id='shdon' omit:class='ant-input Input__BorderBottomInput-sc-16b2ylx-2 fAKTjC' xpath='(.//*[@id=&amp;apos;shdon&amp;apos;])[2]' tag='input' /&gt;" SetFocus="False" SimulateType="False" Text="[RowValue(3).ToString.Trim.TrimStart(&quot;0&quot;c)]" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[482920748] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_10" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-btn ButtonAnt__Button-sc-p5q16s-0 bdtMvg ant-btn-primary' xpath='/html/body/div[1]/section/section/main/div/div/div/div/div[3]/div[2]/div[3]/div[1]/div/div/form/div[3]/div[1]/button' tag='button' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:ExtractStructuredData DelayAfter="{x:Null}" DelayBefore="{x:Null}" Html="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayBetweenPagesMS="1000" DisplayName="[514720730] Extract Structured Data (NB)" sap:VirtualizedContainerService.HintSize="527,68" sap2010:WorkflowViewState.IdRef="ExtractStructuredData_1" MaxNumberResult="100" Result="[invoiceQueryResult]" Selector="{}{&#xA;  &quot;Columns&quot;: [&#xA;    {&#xA;      &quot;Name&quot;: &quot;STT&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 1,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Ký hiệu mẫu số\r\n&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 2,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Ký hiệu hóa đơn&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 3,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Số hóa đơn&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 4,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column4&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 5,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column5&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 6,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column6&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 7,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column7&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 8,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column8&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 9,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column9&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 10,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column10&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 11,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column11&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 12,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column12&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 13,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column13&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 14,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column14&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 15,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column15&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 16,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    }&#xA;  ],&#xA;  &quot;ScopeSelector&quot;: &quot;/html[1]/body[1]/div[1]/section[1]/section[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[3]/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]&quot;,&#xA;  &quot;NextPageSelector&quot;: null,&#xA;  &quot;MaxNumberResult&quot;: 100,&#xA;  &quot;ExtractTable&quot;: true&#xA;}" TimeoutMS="30000" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[705326383] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_11" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-table-row-cell-break-word' xpath='/html/body/div[1]/section/section/main/div/div/div/div/div[3]/div[2]/div[3]/div[2]/div[2]/div[3]/div[1]/div[2]/div/div/div/div/div/div[2]/table/tbody/tr/td[1]' tag='td' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[887234200] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_12" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-btn ButtonAnt__IconButton-sc-p5q16s-1 kgBiib ant-btn-icon-only' xpath='/html/body/div[1]/section/section/main/div/div/div/div/div[3]/div[2]/div[3]/div[2]/div[1]/div[2]/div/div[5]/button' tag='button' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <ran:ExtractStructuredData DelayAfter="{x:Null}" DelayBefore="{x:Null}" Html="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayBetweenPagesMS="1000" DisplayName="[967222825] Extract Structured Data (NB)" sap:VirtualizedContainerService.HintSize="527,68" sap2010:WorkflowViewState.IdRef="ExtractStructuredData_2" MaxNumberResult="100" Result="[invoiceDetail]" Selector="{}{&#xA;  &quot;Columns&quot;: [&#xA;    {&#xA;      &quot;Name&quot;: &quot;STT&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 1,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Tính chất&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 2,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Tên hàng hóa, dịch vụ&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 3,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Đơn vị tính&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 4,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Số lượng&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 5,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Đơn giá&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 6,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Chiết khấu&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 7,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Thuế suất&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 8,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Thành tiền chưa có thuế GTGT&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 9,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    }&#xA;  ],&#xA;  &quot;ScopeSelector&quot;: &quot;/html[1]/body[1]/div[6]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/table[1]&quot;,&#xA;  &quot;NextPageSelector&quot;: null,&#xA;  &quot;MaxNumberResult&quot;: 100,&#xA;  &quot;ExtractTable&quot;: true&#xA;}" TimeoutMS="30000" />
+                  <ran:ExtractStructuredData DelayAfter="{x:Null}" DelayBefore="{x:Null}" Html="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayBetweenPagesMS="1000" DisplayName="[008363455] Extract Structured Data (NB)" sap:VirtualizedContainerService.HintSize="527,68" sap2010:WorkflowViewState.IdRef="ExtractStructuredData_3" MaxNumberResult="100" Result="[invoiceDetail1]" Selector="{}{&#xA;  &quot;Columns&quot;: [&#xA;    {&#xA;      &quot;Name&quot;: &quot;Thuế suất&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 1,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Tổng tiền chưa thuế&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 2,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Tổng tiền thuế&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 3,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    }&#xA;  ],&#xA;  &quot;ScopeSelector&quot;: &quot;/html[1]/body[1]/div[6]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/table[1]&quot;,&#xA;  &quot;NextPageSelector&quot;: null,&#xA;  &quot;MaxNumberResult&quot;: 100,&#xA;  &quot;ExtractTable&quot;: true&#xA;}" TimeoutMS="30000" />
+                  <ran:ExtractStructuredData DelayAfter="{x:Null}" DelayBefore="{x:Null}" Html="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayBetweenPagesMS="1000" DisplayName="[029726798] Extract Structured Data (NB)" sap:VirtualizedContainerService.HintSize="527,68" sap2010:WorkflowViewState.IdRef="ExtractStructuredData_4" MaxNumberResult="100" Result="[invoiceDetail1]" Selector="{}{&#xA;  &quot;Columns&quot;: [&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 1,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    },&#xA;    {&#xA;      &quot;Name&quot;: &quot;Column1&quot;,&#xA;      &quot;Tag&quot;: &quot;td&quot;,&#xA;      &quot;Attribute&quot;: null,&#xA;      &quot;ClassName&quot;: null,&#xA;      &quot;Paths&quot;: [],&#xA;      &quot;Index&quot;: 2,&#xA;      &quot;ExtractUrl&quot;: false,&#xA;      &quot;NameUrl&quot;: null&#xA;    }&#xA;  ],&#xA;  &quot;ScopeSelector&quot;: &quot;/html[1]/body[1]/div[6]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/table[1]&quot;,&#xA;  &quot;NextPageSelector&quot;: null,&#xA;  &quot;MaxNumberResult&quot;: 100,&#xA;  &quot;ExtractTable&quot;: true&#xA;}" TimeoutMS="30000" />
+                  <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[066079235] Click (NB)" sap:VirtualizedContainerService.HintSize="527,118" sap2010:WorkflowViewState.IdRef="Click_13" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-modal-close-x' xpath='//span[@class=&amp;apos;ant-modal-close-x&amp;apos;]' tag='span' /&gt;" SimulateClick="False" TimeoutMS="30000" WaitVisible="True" />
+                  <TryCatch DisplayName="[510249576] Try Catch" sap:VirtualizedContainerService.HintSize="527,434" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch.Try>
+                      <If Condition="[RowValue(3).ToString.Trim.TrimStart(&quot;0&quot;c).Equals(invoiceQueryResult(0).Item(&quot;Số hóa đơn&quot;))]" DisplayName="[517750598] If" sap:VirtualizedContainerService.HintSize="509,207" sap2010:WorkflowViewState.IdRef="If_3">
+                        <If.Then>
+                          <Assign DisplayName="[517755598] Assign" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[subTaskStatus]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Then>
+                        <If.Else>
+                          <Assign DisplayName="[517757633] Assign" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[subTaskStatus]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Else>
+                      </If>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="513,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Assign DisplayName="[529761686] Assign" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[subTaskStatus]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                </Sequence>
+              </ActivityAction>
+            </ran:AttachBrowser.Body>
+          </ran:AttachBrowser>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="589,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <rac:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" MessageBoxDuration="{x:Null}" Buttons="Ok" DisplayName="[204166663] Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[exception.Message]" TopMost="True" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

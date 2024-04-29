@@ -1,0 +1,217 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="HouDonDienTu_Login" this:HouDonDienTu_Login.URL="https://hoadondientu.gdt.gov.vn/" this:HouDonDienTu_Login.CompanyID="3702376432-U002" this:HouDonDienTu_Login.CompanyPW="Fepvhoadon@0224" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:rac="clr-namespace:RCA.Activities.Core;assembly=RCA.Activities.Core" xmlns:ran="clr-namespace:RCA.Activities.NativeBrowser;assembly=RCA.Activities.NativeBrowser" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="URL" Type="InArgument(x:String)" />
+    <x:Property Name="CompanyID" Type="InArgument(x:String)" />
+    <x:Property Name="CompanyPW" Type="InArgument(x:String)" />
+    <x:Property Name="subTaskComplete" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>888,3741</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>HouDonDienTu_Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>RCA.Activities.Core</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>RCA.Activities.NativeBrowser</x:String>
+      <x:String>Aka.RPA.Library.Interfaces</x:String>
+      <x:String>RCA.Activities.NativeBrowser.Data.MessageModels</x:String>
+      <x:String>RCA.Activities.Browser</x:String>
+      <x:String>OpenQA.Selenium</x:String>
+      <x:String>akaBot.Studio.WorkflowHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>RCA.Activities.NativeBrowser</AssemblyReference>
+      <AssemblyReference>Aka.RPA.Library</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Windows</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Excel</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Browser</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>WebDriver</AssemblyReference>
+      <AssemblyReference>akaBot.Studio.WorkflowHandling</AssemblyReference>
+      <AssemblyReference>RCAStudio</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="HouDonDienTu_Login" sap:VirtualizedContainerService.HintSize="848,2901" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="[249750180] Try Catch" sap:VirtualizedContainerService.HintSize="826,2777" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="[774759225] Sequence" sap:VirtualizedContainerService.HintSize="808,2550" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:Boolean" Default="False" Name="IsWIndowOpen" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If Condition="[Not IsWIndowOpen]" DisplayName="[774766189] If" sap:VirtualizedContainerService.HintSize="786,2426" sap2010:WorkflowViewState.IdRef="If_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="[053465745] Sequence" sap:VirtualizedContainerService.HintSize="661,2278" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ran:OpenBrowser UiBrowser="{x:Null}" BrowserName="Chrome" ContinueOnError="False" DisplayName="[053469747] Open Browser (NB)" sap:VirtualizedContainerService.HintSize="639,2154" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Maximize="False" PrivateMode="False" QuitBrowserOnCompletedOrFaulted="False" TimeoutMS="30000" Url="[URL]" ZoomFactor="100">
+                  <ran:OpenBrowser.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="[053471781] Do" sap:VirtualizedContainerService.HintSize="625,2015" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Name="loadingPage" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ran:ElementExist NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053473747] Element Exists (NB)" Exists="[loadingPage]" sap:VirtualizedContainerService.HintSize="603,68" sap2010:WorkflowViewState.IdRef="ElementExist_1" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl class='ant-modal-close-x' xpath='//span[@class=&amp;apos;ant-modal-close-x&amp;apos;]' tag='span' /&gt;" TimeoutMS="30000" WaitVisible="True" />
+                        <If Condition="[loadingPage]" DisplayName="[053475742] If" sap:VirtualizedContainerService.HintSize="603,1783" sap2010:WorkflowViewState.IdRef="If_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="[053512745] Sequence" sap:VirtualizedContainerService.HintSize="336,1636" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:Boolean" Name="successfulLogin" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053514745] Click (NB)" sap:VirtualizedContainerService.HintSize="314,118" sap2010:WorkflowViewState.IdRef="Click_1" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl class='ant-modal-close-x' xpath='//span[@class=&amp;apos;ant-modal-close-x&amp;apos;]' tag='span' /&gt;" SimulateClick="True" TimeoutMS="30000" WaitVisible="True" />
+                              <ran:WaitElementVanish Invisible="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053516744] Wait Element Vanishes (NB)" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="WaitElementVanish_1" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl class='ant-modal-body' xpath='//div[@class=&amp;apos;ant-modal-body&amp;apos;]' tag='div' /&gt;" TimeoutMS="3000" WaitVisible="False" />
+                              <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053518748] Click (NB)" sap:VirtualizedContainerService.HintSize="314,118" sap2010:WorkflowViewState.IdRef="Click_2" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl xpath='.//*[@id=&amp;apos;__next&amp;apos;]/section/header/div[1]/div/div[6]/span' tag='span' /&gt;" SimulateClick="True" TimeoutMS="30000" WaitVisible="True" />
+                              <ran:TypeInto DelayBetweenKeys="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053520744] Type Into (NB)" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_1" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl id='username' class='ant-input Input-sc-16b2ylx-0 ggIKll' xpath='.//*[@id=&amp;apos;username&amp;apos;]' tag='input' /&gt;" SetFocus="False" SimulateType="False" Text="[CompanyID]" TimeoutMS="30000" WaitVisible="True" />
+                              <ran:TypeInto DelayBetweenKeys="{x:Null}" NativeBrowser="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053522744] Type Into (NB)" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_2" Selector="&lt;html omit:app='chrome.exe' title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl id='password' class='ant-input' xpath='.//*[@id=&amp;apos;password&amp;apos;]' tag='input' /&gt;" SetFocus="False" SimulateType="False" Text="[CompanyPW]" TimeoutMS="30000" WaitVisible="True" />
+                              <Delay DisplayName="[053524746] Delay" Duration="00:00:30" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                              <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053526746] Click (NB)" sap:VirtualizedContainerService.HintSize="314,118" sap2010:WorkflowViewState.IdRef="Click_6" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='ant-btn ButtonAnt__Button-sc-p5q16s-0 bdtMvg ant-btn-primary' xpath='.//div[2]/div/div[2]/div/div[2]/div[2]/form/div/div[6]/button' tag='button' /&gt;" SimulateClick="True" TimeoutMS="30000" WaitVisible="True" />
+                              <ran:WaitPageLoadComplete NativeBrowser="{x:Null}" TimeoutMS="{x:Null}" ContinueOnError="False" DelayAfter="300" DelayBefore="2000" DisplayName="[053528746] Wait Page Load Complete (NB)" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="WaitPageLoadComplete_1" WaitSuccess="[successfulLogin]" />
+                              <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053530745] Click (NB)" sap:VirtualizedContainerService.HintSize="314,118" sap2010:WorkflowViewState.IdRef="Click_3" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class='styles__MenuWrapper-sc-1opqjrn-4 eItfNu ant-dropdown-trigger' xpath='.//*[@id=&amp;apos;__next&amp;apos;]/section/section/div/div/div/div/div[5]/div' tag='div' /&gt;" SimulateClick="True" TimeoutMS="30000" WaitVisible="True" />
+                              <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053532745] Click (NB)" sap:VirtualizedContainerService.HintSize="314,118" sap2010:WorkflowViewState.IdRef="Click_4" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl xpath='.//div[3]/div/div/ul/li[1]/a' tag='a' /&gt;" SimulateClick="True" TimeoutMS="30000" WaitVisible="True" />
+                              <ran:Click NativeBrowser="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayAfter="300" DelayBefore="300" DisplayName="[053534743] Click (NB)" sap:VirtualizedContainerService.HintSize="314,118" sap2010:WorkflowViewState.IdRef="Click_5" IsSynchronous="False" KeyModifier="None" MouseButton="MOUSE_LEFT" Selector="&lt;html omit:app='chrome.exe' omit:title='Hóa Đơn Điện Tử' /&gt;&lt;webctrl omit:class=' ant-tabs-tab' xpath='.//*[@id=&amp;apos;__next&amp;apos;]/section/section/main/div/div/div/div/div[1]/div/div/div/div/div[1]/div[2]' tag='div' /&gt;" SimulateClick="True" TimeoutMS="30000" WaitVisible="True" />
+                              <Assign DisplayName="[053536744] Assign" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[subTaskComplete]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Assign DisplayName="[053538743] Assign" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[subTaskComplete]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </ran:OpenBrowser.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ran:OpenBrowser>
+              </Sequence>
+            </If.Then>
+          </If>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="812,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="[002921053] Sequence" sap:VirtualizedContainerService.HintSize="336,283" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <rac:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" MessageBoxDuration="{x:Null}" Buttons="Ok" DisplayName="[002923168] Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[exception.Message]" TopMost="True" />
+              <Assign DisplayName="[002925174] Assign" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[subTaskComplete]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

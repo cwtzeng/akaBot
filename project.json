@@ -1,0 +1,27 @@
+{
+  "Name": "GBP_Test",
+  "Description": "General Business Process",
+  "ReleaseNotes": null,
+  "MainWorkflow": "Main.xaml",
+  "Dependencies": {
+    "RCA.Activities.Core": "2.2.0.1",
+    "RCA.Activities.NativeBrowser": "5.0.0",
+    "RCA.Activities.Excel": "2.1.1.0",
+    "RCA.Activities.Windows": "2.1.2.1",
+    "Microsoft.Activities.Extensions": "2.0.6.9"
+  },
+  "ExcludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "ToolVersion": "2.2.0.3",
+  "ProjectVersion": "0.0.0.0",
+  "PackOptions": {},
+  "RuntimeOptions": {
+    "ChromeZoomFactor": 100,
+    "MachineScale": 100
+  },
+  "ProjectDirectory": "C:\\Users\\alex.tzeng\\Documents\\akaBot\\GBP_Test",
+  "ProjectFilePath": "C:\\Users\\alex.tzeng\\Documents\\akaBot\\GBP_Test\\project.json",
+  "ScreenshotsFolder": "C:\\Users\\alex.tzeng\\Documents\\akaBot\\GBP_Test\\.screenshots"
+}
